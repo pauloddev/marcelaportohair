@@ -23,12 +23,13 @@
 :root{
   --nude:#f7f1ea; --nude-2:#efe5da; --card:rgba(255,255,255,.72);
   --gold:#b08a3e; --gold-d:#8f6d2a; --gold-l:#e3c677;
-  --gold-grad:linear-gradient(135deg,#a07a30 0%,#d9b95f 35%,#f1dc9b 50%,#d2ae52 68%,#9a7429 100%);
+  --gold-grad:linear-gradient(135deg,#8f6a22 0%,#c8a24a 35%,#e6c872 50%,#bf983f 68%,#86621e 100%);
   --ink:#3a3a40; --ink-2:#5b5b63;
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html{background:var(--nude)}
-.bg{position:fixed;inset:0;z-index:-1;background:var(--nude) url('fundo.jpg') center top/cover no-repeat}
+.bg{position:fixed;inset:0;z-index:-1;background:var(--nude) url('fundo.jpg') center center/cover no-repeat}
+.bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(247,241,234,.5),rgba(247,241,234,.38))}
 body{min-height:100vh;font-family:'Jost',sans-serif;color:var(--ink);display:flex;justify-content:center;overflow-x:hidden;
   }
 .wrap{width:100%;max-width:460px;padding:max(26px,env(safe-area-inset-top)) 22px max(30px,env(safe-area-inset-bottom));display:flex;flex-direction:column;align-items:center;text-align:center}
