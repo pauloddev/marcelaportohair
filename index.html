@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Marcela Porto Hair | Colorista em Catalão-GO</title>
+<meta name="description" content="Colorista certificada pelo Método Art Visage. Loiros e iluminados em Catalão-GO. Agende seu horário.">
+<meta name="theme-color" content="#f7f1ea">
+<link rel="icon" href="icone.png">
+<link rel="apple-touch-icon" href="icone.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Marcela Porto Hair | Colorista em Catalão-GO">
+<meta property="og:description" content="Loiros e iluminados. Colorista certificada pelo Método Art Visage. Agende seu horário.">
+<meta property="og:image" content="https://raw.githubusercontent.com/pauloddev/marcelaportohair/main/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/pauloddev/marcelaportohair/main/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --nude:#f7f1ea; --nude-2:#efe5da; --card:rgba(255,255,255,.72);
+  --gold:#b08a3e; --gold-d:#8f6d2a; --gold-l:#e3c677;
+  --gold-grad:linear-gradient(135deg,#a07a30 0%,#d9b95f 35%,#f1dc9b 50%,#d2ae52 68%,#9a7429 100%);
+  --ink:#3a3a40; --ink-2:#5b5b63;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{background:var(--nude)}
+.bg{position:fixed;inset:0;z-index:-1;background:var(--nude) url('fundo.jpg') center top/cover no-repeat}
+body{min-height:100vh;font-family:'Jost',sans-serif;color:var(--ink);display:flex;justify-content:center;overflow-x:hidden;
+  }
+.wrap{width:100%;max-width:460px;padding:max(26px,env(safe-area-inset-top)) 22px max(30px,env(safe-area-inset-bottom));display:flex;flex-direction:column;align-items:center;text-align:center}
+
+/* Foto principal */
+.hero{position:relative;width:100%;opacity:0;animation:rise .9s .05s forwards}
+.hero::before{content:"";position:absolute;inset:14px -10px -10px 14px;border:1.5px solid var(--gold-l);border-radius:26px 26px 150px 150px;opacity:.8}
+.hero img{position:relative;display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:26px 26px 150px 150px;
+  box-shadow:0 24px 50px rgba(90,70,40,.22)}
+.hero .badge{position:absolute;left:50%;bottom:-18px;transform:translateX(-50%);display:flex;align-items:center;gap:8px;white-space:nowrap;
+  padding:10px 20px;border-radius:999px;background:#fff;border:1px solid rgba(176,138,62,.55);box-shadow:0 10px 24px rgba(90,70,40,.18);
+  font-size:12px;font-weight:500;letter-spacing:2.4px;text-transform:uppercase;color:var(--gold-d)}
+.badge svg{width:15px;height:15px;fill:var(--gold)}
+
+/* Nome */
+h1{margin-top:44px;font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(40px,12vw,52px);line-height:1;letter-spacing:.5px;
+  background:var(--gold-grad);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;opacity:0;animation:rise .9s .2s forwards,shine 12s linear infinite}
+@keyframes shine{to{background-position:200% center}}
+.role{margin-top:10px;font-size:12.5px;font-weight:500;letter-spacing:6px;text-transform:uppercase;color:var(--ink);opacity:0;animation:rise .9s .3s forwards}
+.rule{display:flex;align-items:center;gap:12px;width:100%;margin:22px 0;opacity:0;animation:rise .9s .38s forwards}
+.rule::before,.rule::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.rule i{width:7px;height:7px;background:var(--gold);transform:rotate(45deg)}
+
+/* Frase */
+.quote{position:relative;width:100%;padding:34px 26px 28px;border-radius:22px;background:var(--card);border:1px solid rgba(176,138,62,.3);
+  box-shadow:0 14px 34px rgba(90,70,40,.1);opacity:0;animation:rise .9s .45s forwards}
+.quote::before{content:"\201C";position:absolute;top:-6px;left:50%;transform:translateX(-50%);font-family:'Cormorant Garamond',serif;font-size:84px;line-height:1;color:var(--gold);opacity:.9}
+.quote .lead{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:clamp(23px,6.6vw,27px);line-height:1.25;color:var(--ink)}
+.quote .lead b{font-weight:600;color:var(--gold-d)}
+.quote p{margin-top:14px;font-size:15px;line-height:1.65;color:var(--ink-2)}
+
+/* Sobre (4 itens, 2 colunas iguais) */
+.about{margin-top:16px;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.item{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;min-height:112px;padding:16px 10px;border-radius:18px;text-decoration:none;color:var(--ink);
+  background:var(--card);border:1px solid rgba(176,138,62,.28);box-shadow:0 8px 22px rgba(90,70,40,.08);opacity:0;animation:rise .8s forwards}
+.about .item:nth-child(1){animation-delay:.55s}.about .item:nth-child(2){animation-delay:.62s}.about .item:nth-child(3){animation-delay:.69s}.about .item:nth-child(4){animation-delay:.76s}
+.item svg{width:26px;height:26px;fill:none;stroke:var(--gold);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.item b{font-weight:500;font-size:13.5px;line-height:1.35;letter-spacing:.3px}
+.item small{display:block;font-size:11.5px;color:var(--gold-d);margin-top:2px;letter-spacing:.3px}
+
+/* Botão principal */
+.cta{margin-top:20px;width:100%;height:64px;border-radius:16px;display:flex;align-items:center;justify-content:center;gap:12px;text-decoration:none;color:#2f2a22;
+  font-weight:600;font-size:14px;letter-spacing:3px;text-transform:uppercase;position:relative;overflow:hidden;isolation:isolate;
+  background:var(--gold-grad);background-size:200% auto;box-shadow:0 14px 30px rgba(160,122,48,.38),inset 0 -2px 0 rgba(0,0,0,.08);
+  transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s;opacity:0;animation:rise .8s .85s forwards}
+.cta svg{width:22px;height:22px;fill:#2f2a22;flex:none}
+.cta::after{content:"";position:absolute;top:0;left:-70%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:sweep 5s 1.8s infinite}
+@keyframes sweep{to{left:140%}}
+
+.label{margin:34px 0 16px;display:flex;align-items:center;gap:12px;width:100%;font-size:11.5px;font-weight:500;letter-spacing:5px;text-transform:uppercase;color:var(--gold-d)}
+.label::before,.label::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(176,138,62,.6))}
+.label::after{transform:scaleX(-1)}
+
+/* Horário */
+.hours{width:100%;padding:8px 20px 12px;border-radius:20px;background:var(--card);border:1px solid rgba(176,138,62,.3);box-shadow:0 12px 30px rgba(90,70,40,.1);text-align:left}
+.hours .top{display:flex;align-items:center;justify-content:space-between;padding:12px 0 14px;border-bottom:1px solid rgba(176,138,62,.3)}
+.status{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14px;letter-spacing:.5px;color:#1e7a47}
+.status::before{content:"";width:9px;height:9px;border-radius:50%;background:#2fbf71;animation:ping 1.8s infinite}
+.status.off{color:#a8324f}.status.off::before{background:#d9526f;animation:none}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(47,191,113,.55)}70%,100%{box-shadow:0 0 0 8px rgba(47,191,113,0)}}
+.hours ul{list-style:none}
+.hours li{display:flex;justify-content:space-between;padding:10px 0;font-size:14.5px;color:var(--ink-2);border-bottom:1px dashed rgba(176,138,62,.25)}
+.hours li:last-child{border-bottom:0}
+.hours li span:last-child{font-weight:500;color:var(--ink)}
+.hours li.closed span:last-child{color:#a8324f;opacity:.85}
+.hours li.today{color:var(--gold-d);font-weight:600}.hours li.today span:last-child{color:var(--gold-d)}
+
+/* Galeria */
+.gallery{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.gallery img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:18px;border:3px solid #fff;box-shadow:0 12px 28px rgba(90,70,40,.18)}
+
+/* Links */
+.links{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.link{display:flex;align-items:center;justify-content:center;gap:10px;height:58px;border-radius:14px;text-decoration:none;color:var(--ink);
+  background:var(--card);border:1px solid rgba(176,138,62,.4);font-weight:500;font-size:12.5px;letter-spacing:2px;text-transform:uppercase;
+  box-shadow:0 8px 20px rgba(90,70,40,.08);transition:transform .35s cubic-bezier(.2,.8,.2,1),background .3s,color .3s}
+.link svg{width:20px;height:20px;fill:var(--gold);flex:none;transition:fill .3s}
+.mail{grid-column:1/-1;font-size:13px;letter-spacing:.8px;text-transform:none}
+
+@media (hover:hover){
+  .cta:hover{transform:translateY(-3px);box-shadow:0 18px 36px rgba(160,122,48,.5)}
+  .link:hover,.item[href]:hover{transform:translateY(-3px)}
+  .link:hover{background:var(--ink);color:#f1dc9b}.link:hover svg{fill:#f1dc9b}
+}
+.cta:active,.link:active{transform:scale(.98)}
+.cta:focus-visible,.link:focus-visible,.item:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+.foot{margin-top:30px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--ink-2);letter-spacing:.5px}
+
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important}}
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<main class="wrap">
+
+  <div class="hero">
+    <img src="marcela.jpg" alt="Marcela Porto, colorista" width="1080" height="1440">
+    <span class="badge"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z"/></svg>Loiros &amp; Iluminados</span>
+  </div>
+
+  <h1>Marcela Porto</h1>
+  <p class="role">Hair · Colorista</p>
+  <div class="rule"><i></i></div>
+
+  <section class="quote">
+    <p class="lead">Sou apaixonada por <b>loiros</b> e <b>morenas iluminadas.</b></p>
+    <p>Minha maior realização é ver cada cliente se olhando no espelho com brilho nos olhos e o coração leve, feliz com o resultado que criamos juntas.</p>
+  </section>
+
+  <div class="about">
+    <div class="item">
+      <svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 100 18c1.600 0 2-1 1.400-2.100-.6-1.100 0-2.400 1.300-2.400H17a4 4 0 004-4c0-5-4-9.500-9-9.500z"/><circle cx="7.500" cy="11" r="1"/><circle cx="10" cy="7" r="1"/><circle cx="15" cy="7.500" r="1"/></svg>
+      <b>Colorista</b>
+    </div>
+    <a class="item" target="_blank" rel="noopener" href="https://www.instagram.com/metodoartvisage/">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="5.500"/><path d="M8.500 13.500L7 21l5-2.500 5 2.500-1.500-7.500"/></svg>
+      <b>Certificada pelo<small>@metodoartvisage</small></b>
+    </a>
+    <div class="item">
+      <svg viewBox="0 0 24 24"><path d="M12 3l1.800 5.200L19 10l-5.200 1.800L12 17l-1.800-5.200L5 10l5.200-1.800z"/><path d="M19 16l.8 2.200L22 19l-2.200.8L19 22l-.8-2.200L16 19l2.200-.8z"/></svg>
+      <b>Loiros e iluminados</b>
+    </div>
+    <div class="item">
+      <svg viewBox="0 0 24 24"><path d="M12 21s7-6.200 7-11.500a7 7 0 00-14 0C5 14.800 12 21 12 21z"/><circle cx="12" cy="9.500" r="2.500"/></svg>
+      <b>Catalão - GO</b>
+    </div>
+  </div>
+
+  <a class="cta" target="_blank" rel="noopener" href="https://wa.me/5564981431483?text=Ol%C3%A1%2C%20Marcela!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio.">
+    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.600 15.100L2 22l5-1.300A10 10 0 1012 2zm0 18.200c-1.500 0-3-.4-4.200-1.200l-.3-.2-3 .8.8-2.900-.2-.3A8.200 8.200 0 1112 20.200zm4.500-6.100c-.2-.1-1.500-.7-1.700-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.200-.3.200-.5.100-1.500-.7-2.500-1.300-3.500-2.900-.3-.4.300-.4.800-1.400.1-.2 0-.3 0-.5l-.8-1.800c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.100-.7.300-.7.700-1 1.500-1 2.400.1 1 .5 2 1.200 2.900 1.300 1.900 2.900 3.200 5 4 1.800.6 2.500.6 3.400.5.600-.1 1.700-.7 2-1.400.2-.7.200-1.200.1-1.400-.1-.1-.2-.2-.4-.3z"/></svg>
+    Agendar horário
+  </a>
+
+  <p class="label">Horário de atendimento</p>
+  <section class="hours" aria-label="Horário de atendimento">
+    <div class="top"><span class="status off" id="status">Verificando…</span><span id="today-hours"></span></div>
+    <ul id="week">
+      <li data-d="1"><span>Segunda-feira</span><span>Fechado</span></li>
+      <li data-d="2"><span>Terça-feira</span><span>09:00 – 19:00</span></li>
+      <li data-d="3"><span>Quarta-feira</span><span>09:00 – 19:00</span></li>
+      <li data-d="4"><span>Quinta-feira</span><span>09:00 – 19:00</span></li>
+      <li data-d="5"><span>Sexta-feira</span><span>09:00 – 20:00</span></li>
+      <li data-d="6"><span>Sábado</span><span>09:00 – 20:00</span></li>
+      <li data-d="0"><span>Domingo</span><span>Fechado</span></li>
+    </ul>
+  </section>
+
+  <p class="label">Meu trabalho</p>
+  <div class="gallery">
+    <img src="servico1.jpg" alt="Morena iluminada com mechas acobreadas" loading="lazy" width="800" height="1000">
+    <img src="servico2.jpg" alt="Iluminado em ondas, castanho com mechas douradas" loading="lazy" width="800" height="1000">
+    <img src="servico3.jpg" alt="Iluminado caramelo em camadas" loading="lazy" width="800" height="1000">
+    <img src="servico4.jpg" alt="Iluminado dourado com ondas" loading="lazy" width="800" height="1000">
+  </div>
+
+  <p class="label">Redes e contato</p>
+  <div class="links">
+    <a class="link" target="_blank" rel="noopener" href="https://www.instagram.com/marcelaportohair">
+      <svg viewBox="0 0 24 24"><path d="M7.500 2h9A5.500 5.500 0 0122 7.500v9a5.500 5.500 0 01-5.500 5.500h-9A5.500 5.500 0 012 16.500v-9A5.500 5.500 0 017.500 2zm0 2A3.500 3.500 0 004 7.500v9A3.500 3.500 0 007.500 20h9a3.500 3.500 0 003.500-3.500v-9A3.500 3.500 0 0016.500 4zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6zm5.300-3.100a1.200 1.200 0 110 2.400 1.200 1.200 0 010-2.400z"/></svg>Instagram
+    </a>
+    <a class="link" target="_blank" rel="noopener" href="https://www.tiktok.com/@marcelaportohair">
+      <svg viewBox="0 0 24 24"><path d="M16.600 2h-3.200v13.300a2.900 2.900 0 11-2.900-2.900c.3 0 .6 0 .9.1V9.200a6.200 6.200 0 00-.9-.1 6.100 6.100 0 106.100 6.100V8.600a8 8 0 004.600 1.500V6.900a4.800 4.800 0 01-4.600-4.900z"/></svg>TikTok
+    </a>
+    <a class="link" target="_blank" rel="noopener" href="https://www.facebook.com/share/1BELUwRWK8/?mibextid=wwXIfr">
+      <svg viewBox="0 0 24 24"><path d="M13.500 22v-8.200h2.800l.5-3.300h-3.300V8.400c0-1 .4-1.700 1.800-1.700H17V3.800C16.700 3.700 15.700 3.600 14.600 3.600c-2.500 0-4.100 1.500-4.100 4.200v2.700H7.700v3.300h2.800V22z"/></svg>Facebook
+    </a>
+    <a class="link" target="_blank" rel="noopener" href="https://maps.app.goo.gl/37yi1ng1a2jDg7h29">
+      <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 00-7 7c0 5.200 7 13 7 13s7-7.800 7-13a7 7 0 00-7-7zm0 9.500A2.500 2.500 0 1112 6.500a2.500 2.500 0 010 5z"/></svg>Localização
+    </a>
+    <a class="link mail" href="mailto:caldasmarcela32@gmail.com">
+      <svg viewBox="0 0 24 24"><path d="M3 5h18a1 1 0 011 1v12a1 1 0 01-1 1H3a1 1 0 01-1-1V6a1 1 0 011-1zm9 7.200L4.500 7v.2L12 13l7.500-5.800V7z"/></svg>caldasmarcela32@gmail.com
+    </a>
+  </div>
+
+  <p class="foot">© Marcela Porto Hair · Catalão-GO</p>
+</main>
+<script>
+/* Aberta/fechada agora (horário de Brasília) */
+(()=>{
+  const H={0:null,1:null,2:[9,19],3:[9,19],4:[9,19],5:[9,20],6:[9,20]};
+  const parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/Sao_Paulo',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+  const g=t=>parts.find(p=>p.type===t).value;
+  const d={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[g('weekday')];
+  const m=(+g('hour')%24)*60+ +g('minute');
+  const h=H[d],el=document.getElementById('status'),th=document.getElementById('today-hours');
+  const open=h&&m>=h[0]*60&&m<h[1]*60;
+  el.textContent=open?'Aberta agora':'Fechada agora';el.className='status'+(open?'':' off');
+  th.textContent=h?String(h[0]).padStart(2,'0')+':00 – '+h[1]+':00':'Fechado hoje';
+  th.style.cssText='font-weight:500;font-size:14.5px;color:var(--ink)';
+  const li=document.querySelector('#week li[data-d="'+d+'"]');if(li)li.classList.add('today');
+  document.querySelectorAll('#week li').forEach(l=>{if(l.lastElementChild.textContent==='Fechado')l.classList.add('closed')});
+})();
+</script>
+</body>
+</html>
